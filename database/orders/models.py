@@ -8,7 +8,6 @@ class Order(db.Model):
     address = db.Column(db.String(128), nullable=False)
     date_created = db.Column(db.DateTime, default=datetime.utcnow)
     date_delivery = db.Column(db.DateTime)
-    active = db.Column(db.Boolean, default=True)
 
     def set_delivery_date(self, date):
         self.date_delivery = date
